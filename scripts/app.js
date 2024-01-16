@@ -1,18 +1,21 @@
 function appearChars(str, elem, timeBetween) {
   var index = -1;
-  (function go() {
+  setTimeout(function go() {
     if (++index < str.length) {
       elem.innerHTML = elem.innerHTML + str.charAt(index);
       setTimeout(go, timeBetween);
     }
-  })();
+  }, delay);
 }
 
 var str = "Programmer Boy";
 var elem = document.getElementById("pboy");
 var timeBetween = 50;
+var delay = 1000;
 
-appearChars(str, elem, timeBetween);
+window.addEventListener("load", () =>
+  appearChars(str, elem, timeBetween, delay)
+);
 
 var ulMenuP = document.querySelector("nav");
 
