@@ -14,6 +14,8 @@ body {
   max-width: 100vw;
 }
 
+
+/* Gradient Text */
 .text-gradient {
   background: linear-gradient(#def, #abc);
 
