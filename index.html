@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Site</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="styles/container.css" />
+    <link rel="stylesheet" href="styles/flex.css" />
+    <script src="scripts/app.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="container flex jc-between ai-center">
+          <div class="nav-logo" onclick="ulMenuP.classList.toggle('shown')">
+            <img src="assets/logo_prev_ui.png" alt="logo" />
+          </div>
+          <ul id="ulMenu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section class="header-bottom">
+        <div class="container" id="about">
+          <h1>I'm</h1>
+          <h1 class="text-gradient">Parsa Mostafaie</h1>
+          <p>A <b id="pboy"></b></p>
+        </div>
+      </section>
+    </header>
+  </body>
+</html>

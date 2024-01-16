@@ -1,0 +1,55 @@
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl,
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .container,
+  .container-sm {
+    width: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container,
+  .container-sm,
+  .container-md {
+    width: 720px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg {
+    width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    width: 1140px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    width: 1320px;
+  }
+}
