@@ -3,6 +3,11 @@
   src: url("/assets/Salsa/Salsa-Regular.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
 body {
   font-family: Salsa;
 }
