@@ -8,10 +8,10 @@ function appearChars(str, elem, timeBetween) {
   }, delay);
 }
 
-var str = "Programmer Boy";
-var elem = document.getElementById("pboy");
+var str = "arsa Mostafaie";
+var elem = document.getElementById("name");
 var timeBetween = 50;
-var delay = 1000;
+var delay = 10;
 
 window.addEventListener("load", () =>
   appearChars(str, elem, timeBetween, delay)

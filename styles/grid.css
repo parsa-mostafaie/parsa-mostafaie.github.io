@@ -1,0 +1,37 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row > div {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+@media only screen and (min-width: 576px) {
+}
+
+@media only screen and (min-width: 768px) {
+  .row > div {
+    max-width: 47%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .row > div {
+    max-width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .row > div {
+    max-width: 21%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .row > div {
+    max-width: 15%;
+  }
+}
