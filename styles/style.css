@@ -72,7 +72,6 @@ h1.text-gradient {
 
 .btn-grad:hover {
   background-position: right center; /* change the direction of the change here */
-  text-decoration: none;
 }
 
 /*? Menu */
@@ -146,8 +145,17 @@ nav > div > ul > li > a {
 }
 
 #skills .row > div {
-  padding: 15px;
-  border-radius: 5px;
+  padding: 30px;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+
+  /* Gradient */
+  background-image: linear-gradient(to right bottom, #099, #0ff);
+}
+
+:is(#skills .row > div):hover {
+  border-radius: 0px;
+  scale: 102%;
 }
 
 #skills .row b.text-gradient {
