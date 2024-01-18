@@ -1,38 +1,52 @@
 .row {
+  /*? responsive */
+  --sm: 12;
+  --md: 6;
+  --lg: 4;
+  --xl: 4;
+  --xxl: 1;
+
+  /*? gap */
+  --row-gap: 1.5rem;
+  --col-em: 15px;
+
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .row > div {
   width: 100%;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: var(--row-gap);
+  margin-bottom: var(--row-gap);
 }
 
 @media only screen and (min-width: 576px) {
+  .row > div {
+    max-width: calc(100% * var(--sm) / 12 - var(--col-em));
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .row > div {
-    max-width: 47%;
+    max-width: calc(100% * var(--md) / 12 - var(--col-em));
   }
 }
 
 @media only screen and (min-width: 992px) {
   .row > div {
-    max-width: 30%;
+    max-width: calc(100% * var(--lg) / 12 - var(--col-em));
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .row > div {
-    max-width: 30%;
+    max-width: calc(100% * var(--xl) / 12 - var(--col-em));
   }
 }
 
 @media only screen and (min-width: 1400px) {
   .row > div {
-    max-width: 15%;
+    max-width: calc(100% * var(--xxl) / 12 - var(--col-em));
   }
 }
