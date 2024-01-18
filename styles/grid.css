@@ -27,7 +27,7 @@
 
 @media only screen and (min-width: 1200px) {
   .row > div {
-    max-width: 21%;
+    max-width: 30%;
   }
 }
 
