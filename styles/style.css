@@ -13,9 +13,25 @@ body {
   box-sizing: border-box;
 }
 
+/* Text */
+.center {
+  text-align: center;
+}
+
+.medium-font {
+  font-size: 3.9em;
+}
+
 /* Gradient Text */
 .text-gradient {
   background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-2 {
+  background: linear-gradient(blue, darkblue);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -129,12 +145,12 @@ nav > div > ul > li > a {
   margin-bottom: 2rem;
 }
 
-#skills > div {
+#skills .row > div {
   padding: 15px;
   border-radius: 5px;
 }
 
-#skills > div > div > b {
+#skills .row b.text-gradient {
   font-size: 3em;
 }
 
