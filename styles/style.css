@@ -167,6 +167,29 @@ nav > div > ul > li > a {
   font-size: 3em;
 }
 
+/* Footer */
+footer > .container {
+  color: white;
+  background-color: #0f2027;
+  padding: 25px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  text-align: center;
+}
+
+footer a {
+  display: inline-block;
+  color: #50a0ef;
+  text-decoration: none;
+}
+
+.gap {
+  gap: 15px;
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query for `xs`; since this is the default */
 
