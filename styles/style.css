@@ -155,7 +155,7 @@ nav > div > ul > li > a {
   transition: all 0.5s ease;
 
   /* Gradient */
-  background-image: linear-gradient(to right bottom, #099, #0ff);
+  background-image: linear-gradient(to right bottom, #0af, #00f);
 }
 
 #skills .row b.text-gradient {

@@ -19,6 +19,15 @@ window.addEventListener("load", () =>
 
 var ulMenuP = document.querySelector("nav");
 
+var ulLiA = document.querySelectorAll("ul > li > a");
+
+ulLiA.forEach((item) => {
+  item.addEventListener("click", () => {
+    ulMenuP.classList.remove("shown");
+    check_menu_state();
+  });
+});
+
 function change_menu_state() {
   var media_query = window.matchMedia("(max-width: 768px)");
   var matchMedia = media_query.matches;
