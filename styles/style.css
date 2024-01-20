@@ -158,11 +158,6 @@ nav > div > ul > li > a {
   background-image: linear-gradient(to right bottom, #099, #0ff);
 }
 
-:is(#skills .row > div):hover {
-  border-radius: 0px;
-  scale: 102%;
-}
-
 #skills .row b.text-gradient {
   font-size: 3em;
 }
@@ -202,6 +197,11 @@ footer a {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  :is(#skills .row > div):hover {
+    border-radius: 0px;
+    scale: 102%;
+  }
+
   h1.text-gradient {
     font-size: 4rem;
   }
