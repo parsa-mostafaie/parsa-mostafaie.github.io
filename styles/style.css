@@ -1,3 +1,11 @@
+/*
+* Site Public Styles
+*/
+
+@import url(/styles/container.css);
+@import url(/styles/flex.css);
+@import url(/styles/grid.css);
+
 @font-face {
   font-family: Salsa;
   src: url("/assets/Salsa/Salsa-Regular.ttf");
@@ -79,108 +87,6 @@ h1.text-gradient {
   background-position: right center; /* change the direction of the change here */
 }
 
-/*? Menu */
-nav {
-  overflow: hidden;
-  top: 0;
-  background-color: #50a0eff0;
-  padding: 0.1rem;
-  min-height: 0;
-  width: 100% !important;
-  transition: all 1s ease-in;
-  position: fixed;
-  border-radius: 25px;
-}
-.nav-logo {
-  max-height: 64px;
-}
-
-.nav-logo > img {
-  width: 64px;
-}
-
-nav > div {
-  flex-direction: column;
-}
-
-nav > div > ul {
-  list-style: none;
-  gap: 0.5rem;
-  flex-direction: column;
-  max-height: 0;
-  display: flex;
-}
-
-nav.shown {
-  min-height: 100vh;
-}
-
-nav > div > ul > li {
-  text-align: center;
-}
-
-nav > div > ul > li > a {
-  color: black;
-  text-decoration: none;
-}
-
-#ulMenu a:hover {
-  color: white;
-}
-
-/*? Header */
-.header-bottom {
-  background: linear-gradient(350deg, #1070af, #50a0ef);
-  color: white;
-  background-size: cover;
-
-  width: 100%;
-  max-height: 100vh;
-  padding: 0;
-}
-
-#about {
-  padding: 5rem 0;
-}
-
-/*? skills */
-#skills {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-#skills .row > div {
-  padding: 30px;
-  border-radius: 15px;
-  transition: all 0.5s ease;
-
-  /* Gradient */
-  background-image: linear-gradient(to right bottom, #0af, #00f);
-}
-
-#skills .row b.text-gradient {
-  font-size: 3em;
-}
-
-/* Footer */
-footer > .container {
-  color: white;
-  background-color: #0f2027;
-  padding: 25px;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  text-align: center;
-}
-
-footer a {
-  display: inline-block;
-  color: #50a0ef;
-  text-decoration: none;
-}
-
 .gap {
   gap: 15px;
 }
@@ -197,29 +103,8 @@ footer a {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  :is(#skills .row > div):hover {
-    border-radius: 0px;
-    scale: 102%;
-  }
-
   h1.text-gradient {
     font-size: 4rem;
-  }
-  nav > div > ul,
-  nav > div {
-    display: flex !important;
-    flex-direction: row;
-    max-height: initial;
-  }
-
-  nav > div > ul > li {
-    text-align: left;
-  }
-
-  nav {
-    background-color: #50a0ef;
-    max-width: initial;
-    min-height: initial !important;
   }
 }
 
