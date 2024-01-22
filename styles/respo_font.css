@@ -1,0 +1,40 @@
+.respo-font {
+  --font-xs: 1em;
+  --font-sm: 1em;
+  --font-md: 1em;
+  --font-lg: 1em;
+  --font-xl: 1em;
+  --font-xxl: 1em;
+
+  font-size: var(--font-xs);
+}
+
+@media only screen and (min-width: 576px) {
+  .respo-font {
+    font-size: var(--font-sm);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .respo-font {
+    font-size: var(--font-md);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .respo-font {
+    font-size: var(--font-lg);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .respo-font {
+    font-size: var(--font-xl);
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .respo-font {
+    font-size: var(--font-xxl);
+  }
+}
