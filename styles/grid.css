@@ -5,6 +5,7 @@
   --lg: 4;
   --xl: 4;
   --xxl: 1;
+  --xs: 12;
 
   /*? gap */
   --row-gap: 1.5rem;
@@ -16,7 +17,7 @@
 }
 
 .row > div {
-  width: 100%;
+  width: calc(100% * var(--xs) / 12 - var(--col-em));
   margin-top: var(--row-gap);
   margin-bottom: var(--row-gap);
 }
