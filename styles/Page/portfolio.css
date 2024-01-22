@@ -1,0 +1,115 @@
+@import url(/styles/respo_font.css);
+
+.portfolio {
+  display: flex;
+  justify-content: space-around;
+
+  color: #50a0ef;
+}
+
+body {
+  --font-xs: 0.75rem !important;
+  --font-sm: 1.2rem !important;
+  --font-md: 1.5rem !important;
+  --font-lg: 1.8rem !important;
+  --font-xl: 1.75rem !important;
+  --font-xxl: 2rem !important;
+}
+html {
+  height: 100vh;
+  background: linear-gradient(45deg, #50a0ef, blue, darkblue);
+  background-size: cover;
+}
+
+.portfolio > div {
+  position: relative;
+  padding: 10px;
+  border-radius: 15%;
+  -webkit-border-radius: 15%;
+  -moz-border-radius: 15%;
+  -ms-border-radius: 15%;
+  -o-border-radius: 15%;
+  display: flex;
+  justify-content: center;
+  background-blend-mode: overlay;
+  align-items: center;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  width: 100%;
+}
+
+.portfolio > div a {
+  padding-left: 5px;
+  color: inherit;
+}
+
+.portfolio > div:hover {
+  transform: scale(90%);
+  -webkit-transform: scale(90%);
+  -moz-transform: scale(90%);
+  -ms-transform: scale(90%);
+  -o-transform: scale(90%);
+}
+
+.portfolio > div > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.portfolio > div span {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.portfolio > div::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  background-color: #000a;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+@media only screen and (min-width: 576px) {
+  .portfolio > div{
+    width: 33%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .portfolio >div{
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .portfolio>div{
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .portfolio >div{
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  
+}
