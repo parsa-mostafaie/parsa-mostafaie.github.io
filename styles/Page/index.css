@@ -3,9 +3,8 @@ nav {
   overflow: hidden;
   top: 0;
   background-color: #50a0eff0;
-  padding: 0.1rem;
+  padding: 0.1rem 1rem;
   min-height: 0;
-  width: 100% !important;
   transition: all 1s ease-in;
   position: fixed;
   border-radius: 25px;
@@ -52,14 +51,14 @@ nav > div > ul > li > a {
   background: linear-gradient(350deg, #1070af, #50a0ef);
   color: white;
   background-size: cover;
-
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
   width: 100%;
   max-height: 100vh;
-  padding: 0;
-}
-
-#about {
-  padding: 5rem 0;
+  padding: 5rem 2.5rem;
 }
 
 /*? skills */

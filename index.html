@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio Site</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="favicon/site.webmanifest" />
 
     <link rel="stylesheet" href="styles/style.css" />
@@ -24,37 +38,45 @@
   <body>
     <!-- Header -->
     <header>
-      <nav style="z-index: 9999">
-        <div class="container flex jc-between ai-center">
-          <div class="nav-logo" onclick="change_menu_state()">
-            <img src="assets/logo_prev_ui.png" alt="logo" />
+      <div class="container">
+        <nav style="z-index: 9999" class="container">
+          <div class="flex jc-between ai-center">
+            <div class="nav-logo" onclick="change_menu_state()">
+              <img src="assets/logo_prev_ui.png" alt="logo" />
+            </div>
+            <ul id="ulMenu">
+              <li><a href="/">Home</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="/portfolio.html">Portfolio</a></li>
+            </ul>
           </div>
-          <ul id="ulMenu">
-            <li><a href="/">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="/portfolio.html">Portfolio</a></li>
-          </ul>
-        </div>
-      </nav>
-      <section class="header-bottom">
-        <div class="container" id="about">
-          <h1>I'm</h1>
-          <h1 class="text-gradient" id="name">P</h1>
-          <p>A <b>Programmer Boy</b></p>
-          <div class="flex">
-            <button class="btn-grad ai-center flex">
-              <a href="https://www.github.com/parsa-mostafaie" target="_blank">
-                <i class="fa fa-github"></i> Open Github
-              </a>
-            </button>
-            <button class="btn-grad ai-center flex">
-              <a href="https://www.github.com/parsa-mostafaie" target="_blank">
-                <i class="fa fa-sign-in"></i> Login
-              </a>
-            </button>
+        </nav>
+        <section class="header-bottom">
+          <div class="container" id="about">
+            <h1>I'm</h1>
+            <h1 class="text-gradient" id="name">P</h1>
+            <p>A <b>Programmer Boy</b></p>
+            <div class="flex">
+              <button class="btn-grad ai-center flex">
+                <a
+                  href="https://www.github.com/parsa-mostafaie"
+                  target="_blank"
+                >
+                  <i class="fa fa-github"></i> Open Github
+                </a>
+              </button>
+              <button class="btn-grad ai-center flex">
+                <a
+                  href="https://www.github.com/parsa-mostafaie"
+                  target="_blank"
+                >
+                  <i class="fa fa-sign-in"></i> Login
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </header>
     <main id="skills">
       <div class="container">
