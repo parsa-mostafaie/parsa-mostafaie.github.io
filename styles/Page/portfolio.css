@@ -6,7 +6,7 @@
   color: #50a0ef;
 }
 
-h1{
+h1 {
   font-size: 3.75rem !important;
 }
 
@@ -21,6 +21,7 @@ body {
 
 html {
   height: 100dvh;
+  height: 100vh;
   background: linear-gradient(20deg, #ffffff, #777);
   background-size: cover;
 }
@@ -88,32 +89,30 @@ html {
   -o-border-radius: inherit;
 }
 
-h1{
+h1 {
   margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 576px) {
-  .portfolio > div{
+  .portfolio > div {
     width: 50%;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .portfolio >div{
+  .portfolio > div {
     width: 25%;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .portfolio>div{
+  .portfolio > div {
     width: 25%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  
 }
 
 @media only screen and (min-width: 1400px) {
-  
 }
