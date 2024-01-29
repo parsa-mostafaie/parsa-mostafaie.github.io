@@ -22,10 +22,16 @@ body {
 }
 
 html {
+  padding-bottom: 2.5rem;
   min-height: 100dvh;
   min-height: 100vh;
   background: var(--gradient--1);
   background-size: cover;
+  background-attachment: fixed;
+}
+
+.btn-grad {
+  margin: 0.5rem 0;
 }
 
 html[dark] {
