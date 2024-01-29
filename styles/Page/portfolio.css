@@ -2,17 +2,19 @@
 
 .portfolio {
   display: flex;
-
+  flex-wrap: wrap;
   color: #50a0ef;
+  justify-content: center;
 }
 
 h1 {
   font-size: 3.75rem !important;
+  margin-bottom: 1rem;
 }
 
 body {
-  --font-xs: 1.2rem !important;
-  --font-sm: 1.45rem !important;
+  --font-xs: 1.9rem !important;
+  --font-sm: 1.5rem !important;
   --font-md: 1.2rem !important;
   --font-lg: 1.5rem !important;
   --font-xl: 1.4rem !important;
@@ -20,10 +22,14 @@ body {
 }
 
 html {
-  height: 100dvh;
-  height: 100vh;
-  background: linear-gradient(20deg, #ffffff, #777);
+  min-height: 100dvh;
+  min-height: 100vh;
+  background: var(--gradient--1);
   background-size: cover;
+}
+
+html[dark] {
+  background-image: var(--gradient--3);
 }
 
 .portfolio > div {
@@ -37,7 +43,8 @@ html {
   -moz-transition: all 1s;
   -ms-transition: all 1s;
   -o-transition: all 1s;
-  width: 100%;
+  min-width: 75%;
+  max-width: 75%;
 }
 
 .portfolio > div a {
@@ -79,7 +86,8 @@ html {
   content: "";
   position: absolute;
   z-index: 1;
-  background-color: #000a;
+  background: var(--gradient--2);
+  opacity: 0.75;
   width: 100%;
   height: 100%;
   border-radius: inherit;
@@ -89,25 +97,44 @@ html {
   -o-border-radius: inherit;
 }
 
-h1 {
-  margin-bottom: 1rem;
+html[dark] .text-gradient {
+  background-image: var(--gradient--text--3);
+}
+
+html[dark] .portfolio > div::before {
+  background-image: var(--gradient--4);
+}
+
+.bottom-this{
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(+50%);
+  -webkit-transform: translateX(+50%);
+  -moz-transform: translateX(+50%);
+  -ms-transform: translateX(+50%);
+  -o-transform: translateX(+50%);
+  z-index: 9999;
 }
 
 @media only screen and (min-width: 576px) {
   .portfolio > div {
-    width: 50%;
+    max-width: 50%;
+    min-width: 50%;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .portfolio > div {
-    width: 25%;
+    max-width: 33%;
+    min-width: 33%;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .portfolio > div {
-    width: 25%;
+  .portfolio > div{
+    max-width: 25%;
+    min-width: 25%;
   }
 }
 

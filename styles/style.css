@@ -5,6 +5,7 @@
 @import url(/styles/container.css);
 @import url(/styles/flex.css);
 @import url(/styles/grid.css);
+@import url(/styles/gradients.css);
 
 @font-face {
   font-family: Salsa;
@@ -35,25 +36,6 @@ body {
   font-size: 3.9em;
 }
 
-/* Gradient Text */
-.text-gradient {
-  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-2 {
-  background: linear-gradient(blue, darkblue);
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-h1.text-gradient {
-  font-size: 2.5rem;
-}
-
 /* Gradient button */
 .btn-grad {
   font-size: 1.3rem;
@@ -76,6 +58,10 @@ h1.text-gradient {
   outline: none;
   border: none;
   font-family: inherit;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .btn-grad a {
@@ -103,16 +89,10 @@ h1.text-gradient {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  h1.text-gradient {
-    font-size: 4rem;
-  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  h1.text-gradient {
-    font-size: 5.5rem;
-  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */

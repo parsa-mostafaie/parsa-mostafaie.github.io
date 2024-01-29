@@ -1,0 +1,8 @@
+@import url(/styles/text_gradient.css);
+
+:root {
+  --gradient--1: linear-gradient(50deg, #fff, #aaa);
+  --gradient--2: linear-gradient(30deg, #444, #999);
+  --gradient--3: linear-gradient(50deg, #000, #888);
+  --gradient--4: linear-gradient(30deg, #ddd, #fff);
+}
