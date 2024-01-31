@@ -5,7 +5,11 @@
 @import url(/styles/container.css);
 @import url(/styles/flex.css);
 @import url(/styles/grid.css);
-@import url(/styles/gradients.css);
+@import url(/styles/theme.css);
+
+[css-no-select] {
+  user-select: none;
+}
 
 @font-face {
   font-family: Salsa;
@@ -36,6 +40,18 @@ body {
   font-size: 3.9em;
 }
 
+.bottom-this {
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(+50%);
+  -webkit-transform: translateX(+50%);
+  -moz-transform: translateX(+50%);
+  -ms-transform: translateX(+50%);
+  -o-transform: translateX(+50%);
+  z-index: 9999;
+}
+
 /* Gradient button */
 .btn-grad {
   font-size: 1.3rem;
@@ -52,7 +68,7 @@ body {
   transition: 0.5s;
   background-size: 200% auto;
   color: black;
-  box-shadow: 0 0 20px #eee;
+  box-shadow: 0 0 20px var(--btn-shadow);
   border-radius: 10px;
   display: block;
   outline: none;
@@ -71,6 +87,10 @@ body {
 
 .btn-grad:hover {
   background-position: right center; /* change the direction of the change here */
+}
+
+.btn-grad.no-margin {
+  margin: 0.5rem 0;
 }
 
 .gap {

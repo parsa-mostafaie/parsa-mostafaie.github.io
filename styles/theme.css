@@ -1,0 +1,26 @@
+@import url(/styles/text_gradient.css);
+
+:root {
+  background-color: white;
+  --gradient--1: linear-gradient(50deg, #fff, #aaa);
+  --gradient--2: linear-gradient(30deg, #444, #999);
+  --gradient--3: linear-gradient(50deg, #000, #888);
+  --gradient--4: linear-gradient(30deg, #ddd, #fff);
+  --gradient--header: linear-gradient(350deg, #1070af, #50a0ef);
+  --gradient--skill: linear-gradient(to right bottom, #0af, #00f);
+
+  --color-nav: #50a0eff0;
+  --color-footer: #0f2027;
+  --color-footer-f: white;
+  --color-footer-a: #50a0ef;
+  --btn-shadow: #eee;
+}
+
+:root[dark] {
+  background: #222;
+  background-attachment: fixed;
+  --color-footer: #111;
+  --color-footer-f: #aaa;
+  --color-footer-a: blue;
+  --btn-shadow: #ccc;
+}

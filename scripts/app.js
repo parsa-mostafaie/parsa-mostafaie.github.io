@@ -45,23 +45,54 @@ function check_menu_state() {
 
 window.addEventListener("resize", check_menu_state);
 
-window.addEventListener("load", () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const theme = urlParams.get("theme");
+let _isDark = Boolean(localStorage.getItem("isDark") || "false");
 
-  if (theme == "dark") {
-    document.documentElement.setAttribute("dark", "dark");
+if (_isDark) {
+  document.documentElement.setAttribute("dark", "dark");
+}
+
+window.addEventListener("beforeunload", () => {
+  localStorage.setItem(
+    "isDark",
+    JSON.stringify(document.documentElement.matches("[dark]"))
+  );
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.ctrlKey && event.key === "m") {
+    location.href = "/";
   }
 });
 
-let chngth = document.getElementById("chngTh");
-chngth.addEventListener("click", () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const theme = urlParams.get("theme");
+// Create Change Theme Button
+let chngthBTN = document.createElement("button");
 
-  if (theme == "dark") {
-    location.href = location.href.split("?")[0] + "?theme=light";
-  } else {
-    location.href = location.href.split("?")[0] + "?theme=dark";
+chngthBTN.innerHTML = `Theme`;
+
+chngthBTN.classList.add("btn-grad", "bottom-this", "no-margin");
+chngthBTN.addEventListener("click", changeTheme);
+chngthBTN.addEventListener("contextmenu", autoTheme);
+chngthBTN.addEventListener("long-press", autoTheme);
+
+document.body.append(chngthBTN);
+
+function changeTheme() {
+  let isDark = document.documentElement.matches("[dark]");
+
+  isDark
+    ? document.documentElement.removeAttribute("dark")
+    : document.documentElement.setAttribute("dark", "dark");
+}
+
+function autoTheme(e) {
+  e.preventDefault();
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    let isDark = document.documentElement.matches("[dark]");
+    if (!isDark) {
+      changeTheme();
+    }
   }
-});
+}

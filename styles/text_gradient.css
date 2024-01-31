@@ -3,6 +3,7 @@
   --gradient--text--1: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
   --gradient--text--2: linear-gradient(blue, darkblue);
   --gradient--text--3: linear-gradient(to bottom, #f5f5f5, #efefef, #c9c9c9);
+  --gradient--text--4: linear-gradient(lightblue, blue);
 }
 
 .text-gradient-1,
@@ -21,6 +22,15 @@
 .text-gradient {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Dark Mode */
+html[dark] .text-gradient {
+  background-image: var(--gradient--text--3);
+}
+
+html[dark] .text-gradient-2{
+  background-image: var(--gradient--text--4);
 }
 
 /* Extra small devices (portrait phones, less than 576px) */

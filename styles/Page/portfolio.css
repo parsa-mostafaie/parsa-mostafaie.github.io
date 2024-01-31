@@ -25,17 +25,8 @@ html {
   padding-bottom: 2.5rem;
   min-height: 100dvh;
   min-height: 100vh;
-  background: var(--gradient--1);
   background-size: cover;
   background-attachment: fixed;
-}
-
-.btn-grad {
-  margin: 0.5rem 0;
-}
-
-html[dark] {
-  background-image: var(--gradient--3);
 }
 
 .portfolio > div {
@@ -88,6 +79,10 @@ html[dark] {
   -o-transform: translate(-50%, -50%);
 }
 
+html[dark] .portfolio > div span {
+  color: white;
+}
+
 .portfolio > div::before {
   content: "";
   position: absolute;
@@ -103,25 +98,10 @@ html[dark] {
   -o-border-radius: inherit;
 }
 
-html[dark] .text-gradient {
-  background-image: var(--gradient--text--3);
-}
-
 html[dark] .portfolio > div::before {
   background-image: var(--gradient--4);
 }
 
-.bottom-this{
-  position: fixed;
-  bottom: 0;
-  right: 50%;
-  transform: translateX(+50%);
-  -webkit-transform: translateX(+50%);
-  -moz-transform: translateX(+50%);
-  -ms-transform: translateX(+50%);
-  -o-transform: translateX(+50%);
-  z-index: 9999;
-}
 
 @media only screen and (min-width: 576px) {
   .portfolio > div {
@@ -138,7 +118,7 @@ html[dark] .portfolio > div::before {
 }
 
 @media only screen and (min-width: 992px) {
-  .portfolio > div{
+  .portfolio > div {
     max-width: 25%;
     min-width: 25%;
   }

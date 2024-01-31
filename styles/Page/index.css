@@ -2,7 +2,7 @@
 nav {
   overflow: hidden;
   top: 0;
-  background-color: #50a0eff0;
+  background-color: var(--color-nav);
   padding: 0.1rem 1rem;
   min-height: 0;
   transition: all 1s ease-in;
@@ -48,8 +48,12 @@ nav > div > ul > li > a {
 }
 
 /*? Header */
+html[dark] .btn-list > *{
+  color: #eee;
+}
+
 .header-bottom {
-  background: linear-gradient(350deg, #1070af, #50a0ef);
+  background: var(--gradient--header);
   color: white;
   background-size: cover;
   border-radius: 25px;
@@ -75,7 +79,7 @@ nav > div > ul > li > a {
   transition: all 0.5s ease;
 
   /* Gradient */
-  background-image: linear-gradient(to right bottom, #0af, #00f);
+  background-image: var(--gradient--skill);
 }
 
 #skills .row b.text-gradient {
@@ -84,8 +88,8 @@ nav > div > ul > li > a {
 
 /* Footer */
 footer > .container {
-  color: white;
-  background-color: #0f2027;
+  color: var(--color-footer-f);
+  background-color: var(--color-footer);
   padding: 25px;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -97,7 +101,7 @@ footer > .container {
 
 footer a {
   display: inline-block;
-  color: #50a0ef;
+  color: var(--color-footer-a);
   text-decoration: none;
 }
 
