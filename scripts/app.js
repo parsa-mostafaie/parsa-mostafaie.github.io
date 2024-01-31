@@ -45,18 +45,11 @@ function check_menu_state() {
 
 window.addEventListener("resize", check_menu_state);
 
-let _isDark = Boolean(localStorage.getItem("isDark") || "false");
+let _isDark = localStorage.getItem("isDark") || "false";
 
-if (_isDark) {
+if (_isDark == "true") {
   document.documentElement.setAttribute("dark", "dark");
 }
-
-window.addEventListener("beforeunload", () => {
-  localStorage.setItem(
-    "isDark",
-    JSON.stringify(document.documentElement.matches("[dark]"))
-  );
-});
 
 document.addEventListener("keydown", (event) => {
   if (event.ctrlKey && event.key === "m") {
@@ -82,6 +75,10 @@ function changeTheme() {
   isDark
     ? document.documentElement.removeAttribute("dark")
     : document.documentElement.setAttribute("dark", "dark");
+
+  isDark
+    ? localStorage.setItem("isDark", "false")
+    : localStorage.setItem("isDark", "true");
 }
 
 function autoTheme(e) {
