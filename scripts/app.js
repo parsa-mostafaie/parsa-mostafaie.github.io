@@ -121,3 +121,13 @@ function autoTheme(e) {
     false
   );
 }
+
+// Loading...
+let Loading = document.getElementById("__load__ing__");
+
+document.body.classList.add("loading");
+
+window.addEventListener("load", () => {
+  Loading.parentElement.removeChild(Loading);
+  document.body.classList.remove("loading");
+})

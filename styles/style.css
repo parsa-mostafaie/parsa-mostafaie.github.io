@@ -97,6 +97,26 @@ body {
   gap: 15px;
 }
 
+/* Loading... */
+#__load__ing__ {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: var(--color-footer-f);
+  z-index: calc(9999 + 3);
+}
+body.loading {
+  overflow: hidden;
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query for `xs`; since this is the default */
 
