@@ -8,6 +8,7 @@ function appearChars(str, elem, timeBetween) {
   }, delay);
 }
 
+// Menu
 var ulMenuP = document.querySelector("nav");
 
 var ulLiA = document.querySelectorAll("ul > li > a");
@@ -45,11 +46,14 @@ function check_menu_state() {
 
 window.addEventListener("resize", check_menu_state);
 
-let _isDark = localStorage.getItem("isDark") || "false";
+// darkmode
+(function () {
+  let _isDark = localStorage.getItem("isDark") || "false";
 
-if (_isDark == "true") {
-  document.documentElement.setAttribute("dark", "dark");
-}
+  if (_isDark == "true") {
+    document.documentElement.setAttribute("dark", "dark");
+  }
+})();
 
 document.addEventListener("keydown", (event) => {
   if (event.ctrlKey && event.key === "m") {
@@ -60,14 +64,16 @@ document.addEventListener("keydown", (event) => {
 // Create Change Theme Button
 let chngthBTN = document.createElement("button");
 
-chngthBTN.innerHTML = `Theme`;
+(function () {
+  chngthBTN.innerHTML = `Theme`;
 
-chngthBTN.classList.add("btn-grad", "bottom-this", "no-margin");
-chngthBTN.addEventListener("click", changeTheme);
-chngthBTN.addEventListener("contextmenu", autoTheme);
-chngthBTN.addEventListener("long-press", autoTheme);
+  chngthBTN.classList.add("btn-grad", "bottom-this", "no-margin");
+  chngthBTN.addEventListener("click", changeTheme);
+  chngthBTN.addEventListener("contextmenu", autoTheme);
+  chngthBTN.addEventListener("long-press", autoTheme);
 
-document.body.append(chngthBTN);
+  document.body.append(chngthBTN);
+})();
 
 function changeTheme() {
   let isDark = document.documentElement.matches("[dark]");
@@ -83,26 +89,27 @@ function changeTheme() {
 
 function autoTheme(e) {
   e.preventDefault();
-  if (
+  let darkMedia =
     window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    let isDark = document.documentElement.matches("[dark]");
-    if (!isDark) {
-      changeTheme();
-    }
-  }
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  let __dark__media = !darkMedia;
+
+  __dark__media
+    ? document.documentElement.removeAttribute("dark")
+    : document.documentElement.setAttribute("dark", "dark");
+
+  __dark__media
+    ? localStorage.setItem("isDark", "false")
+    : localStorage.setItem("isDark", "true");
 }
 
-// Scroll Direction
+// Scroll
 {
   let lastScrollTop = 0;
 
-  // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
-  window.addEventListener(
+    window.addEventListener(
     "scroll",
     function () {
-      // or window.addEventListener("scroll"....
       var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
       if (st > lastScrollTop) {
         chngthBTN.style.display = "none";
