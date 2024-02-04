@@ -1,0 +1,24 @@
+html[dark] {
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#y {
+  color: red;
+  font-size: 3rem;
+  transition: 1.4s all !important;
+  -webkit-transition: 1.4s all !important;
+  -moz-transition: 1.4s all !important;
+  -ms-transition: 1.4s all !important;
+  -o-transition: 1.4s all !important;
+}
+
+html[dark] #y {
+  color: blue;
+}
