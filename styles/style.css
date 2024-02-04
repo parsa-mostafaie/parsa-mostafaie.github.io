@@ -31,6 +31,99 @@ body {
   box-sizing: border-box;
 }
 
+/*? Menu */
+nav {
+  overflow: hidden;
+  top: 0;
+  background-color: var(--color-nav);
+  padding: 0.1rem 1rem;
+  min-height: 0;
+  transition: all 1s ease-in;
+  position: fixed;
+  border-radius: 25px;
+}
+
+.nav-logo {
+  max-height: 64px;
+}
+
+.nav-logo > img {
+  width: 64px;
+}
+
+nav > div {
+  flex-direction: column;
+}
+
+nav > div > ul {
+  list-style: none;
+  gap: 1rem;
+  flex-direction: column;
+  max-height: 0;
+  display: flex;
+}
+
+nav > div > ul > li {
+  text-align: center;
+}
+
+nav > div > ul > li > a {
+  color: black;
+  text-decoration: none;
+}
+
+nav.shown {
+  min-height: 100dvh;
+  min-height: 100vh;
+}
+
+#ulMenu a:hover {
+  color: white;
+}
+
+#ulMenu li.dropdown {
+  position: relative;
+}
+
+#ulMenu li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+#ulMenu li.dropdown .dropdown-menu {
+  list-style: square;
+  list-style-position: inside;
+  display: none;
+  position: absolute;
+  width: max-content;
+  right: 50%;
+  transform: translateX(50%);
+  color: white;
+  background-color: #0c0dfedd;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  padding: 13px;
+  transition: all 0.9s;
+  -webkit-transition: all 0.9s;
+  -moz-transition: all 0.9s;
+  -ms-transition: all 0.9s;
+  -o-transition: all 0.9s;
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+}
+
+#ulMenu li.dropdown .dropdown-menu *:hover {
+  color: aqua;
+}
+
+#ulMenu li.dropdown a {
+  color: inherit;
+}
+
 /* Text */
 .center {
   text-align: center;
@@ -129,6 +222,23 @@ body.loading {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  nav > div > ul,
+  nav > div {
+    display: flex !important;
+    flex-direction: row;
+    max-height: initial;
+  }
+
+  nav > div > ul > li {
+    text-align: left;
+  }
+
+  nav {
+    overflow: initial;
+    background-color: #50a0ef;
+    max-width: initial;
+    min-height: initial !important;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
