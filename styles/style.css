@@ -98,7 +98,7 @@ nav.shown {
   right: 50%;
   transform: translateX(50%);
   color: white;
-  background-color: #0c0dfedd;
+  background-color: #0c0dfe;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -117,7 +117,7 @@ nav.shown {
 }
 
 #ulMenu li.dropdown .dropdown-menu *:hover {
-  color: aqua;
+  color: darkblue;
 }
 
 #ulMenu li.dropdown a {
