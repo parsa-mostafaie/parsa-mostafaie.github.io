@@ -140,3 +140,20 @@ window.addEventListener("load", () => {
   loading.parentElement.removeChild(loading);
   document.body.classList.remove("loading");
 });
+
+// Pass Toggler
+let Togglers = document.querySelectorAll("[data-pass-toggle]");
+for (let toggler of Togglers) {
+  toggler.addEventListener("mousedown", () => {
+    let target = document.querySelector(
+      toggler.getAttribute("data-pass-toggle")
+    );
+    target.type = "text";
+  });
+  toggler.addEventListener("mouseup", () => {
+    let target = document.querySelector(
+      toggler.getAttribute("data-pass-toggle")
+    );
+    target.type = "password";
+  });
+}

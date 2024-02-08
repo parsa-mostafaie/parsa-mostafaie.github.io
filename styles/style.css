@@ -11,6 +11,10 @@
   user-select: none;
 }
 
+.w-50 {
+  width: 50%;
+}
+
 @font-face {
   font-family: Salsa;
   src: url("/assets/Salsa/Salsa-Regular.ttf");
