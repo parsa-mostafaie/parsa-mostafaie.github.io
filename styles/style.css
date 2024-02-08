@@ -90,8 +90,7 @@ nav.shown {
 }
 
 #ulMenu li.dropdown .dropdown-menu {
-  list-style: square;
-  list-style-position: inside;
+  list-style: none;
   display: none;
   position: absolute;
   width: max-content;
