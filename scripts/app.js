@@ -107,7 +107,7 @@ function autoTheme(e) {
 {
   let lastScrollTop = 0;
 
-    window.addEventListener(
+  window.addEventListener(
     "scroll",
     function () {
       var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
@@ -123,11 +123,20 @@ function autoTheme(e) {
 }
 
 // Loading...
-let Loading = document.getElementById("__load__ing__");
+let loading = document.createElement("div");
 
-document.body.classList.add("loading");
+(function () {
+  loading.id = "__load__ing__";
+
+  loading.innerHTML = "<h1>Loading...</h1>";
+
+  document.body.classList.add("loading");
+
+  document.body.appendChild(loading);
+  document.body.classList.add("loading");
+})();
 
 window.addEventListener("load", () => {
-  Loading.parentElement.removeChild(Loading);
+  loading.parentElement.removeChild(loading);
   document.body.classList.remove("loading");
-})
+});
