@@ -1,0 +1,65 @@
+:root {
+  --border-of-inp: 1px solid #efefef;
+  --border-of-input: 1px solid #efefef;
+}
+
+.btn-grad-submit {
+  background-image: linear-gradient(
+    45deg,
+    #da22ff 0%,
+    #9733ee 51%,
+    #da22ff 100%
+  );
+  margin: 0;
+}
+
+.btn-grad-submit:hover {
+  background-position: right center;
+}
+
+form > :is(.input-group, .flex) {
+  min-width: 100%;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 1.3rem;
+}
+
+.input-group input {
+  padding: 5px;
+  border: var(--border-of-input);
+  outline: none;
+  flex-grow: 1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+}
+
+.input-group label {
+  text-align: center;
+  min-width: 2rem;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: var(--border-of-inp);
+  color: white;
+  font-size: 1.3em;
+  background-color: gray;
+  border-right: none;
+}

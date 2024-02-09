@@ -156,4 +156,10 @@ for (let toggler of Togglers) {
     );
     target.type = "password";
   });
+  toggler.addEventListener("long-press", () => {
+    let target = document.querySelector(
+      target.getAttribute("data-pass-toggle")
+    );
+    target.type = target.type == "password" ? "text" : "password";
+  });
 }
