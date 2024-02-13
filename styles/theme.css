@@ -16,6 +16,8 @@
   --btn-shadow: #eee;
 
   --login-color: #e2e2e2;
+
+  --color-ring: #50a0ef;
 }
 
 :root[dark] {

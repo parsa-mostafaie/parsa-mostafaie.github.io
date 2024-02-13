@@ -128,7 +128,7 @@ let loading = document.createElement("div");
 (function () {
   loading.id = "__load__ing__";
 
-  loading.innerHTML = "<h1>Loading...</h1>";
+  loading.innerHTML = `<div class="ring" css-no-select>Loading<span></span></div>`;
 
   document.body.classList.add("loading");
 
