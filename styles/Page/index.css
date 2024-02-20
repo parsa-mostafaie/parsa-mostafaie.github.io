@@ -22,19 +22,49 @@ html[dark] .btn-list > * {
 #skills {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  height: max-content;
 }
 
-#skills .row > div {
+.swiper-slide {
+  height: auto !important;
+}
+
+.swiper-pagination-bullet {
+  background: black !important;
+  opacity: 0.9 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: white !important;
+}
+
+#skills .swiper-wrapper > div {
   padding: 30px;
   border-radius: 15px;
-  transition: all 0.5s ease;
 
   /* Gradient */
   background-image: var(--gradient--skill);
 }
 
-#skills .row b.text-gradient {
+#skills .swiper-wrapper b.text-gradient {
   font-size: 3em;
+}
+
+.swiper {
+  height: calc(3 * min-content);
+}
+
+#skills :is(.swiper-button-next, .swiper-button-prev) {
+  color: #ccc;
+  transition: 0.9s;
+  -webkit-transition: 0.9s;
+  -moz-transition: 0.9s;
+  -ms-transition: 0.9s;
+  -o-transition: 0.9s;
+}
+
+#skills :is(.swiper-button-next, .swiper-button-prev):hover {
+  color: #fff;
 }
 
 /* Footer */
