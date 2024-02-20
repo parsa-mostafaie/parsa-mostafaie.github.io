@@ -25,6 +25,11 @@ html[dark] .btn-list > * {
   height: max-content;
 }
 
+#skills b {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
 .swiper-slide {
   height: auto !important;
 }
@@ -38,24 +43,26 @@ html[dark] .btn-list > * {
   background: white !important;
 }
 
-#skills .swiper-wrapper > div {
+.swiper-wrapper > div {
   padding: 30px;
   border-radius: 15px;
 
   /* Gradient */
   background-image: var(--gradient--skill);
+
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 
-#skills .swiper-wrapper b.text-gradient {
+.swiper-wrapper b.text-gradient {
   font-size: 3em;
 }
 
-.swiper {
-  height: calc(3 * min-content);
-}
-
-#skills :is(.swiper-button-next, .swiper-button-prev) {
-  color: #ccc;
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ccc !important;
   transition: 0.9s;
   -webkit-transition: 0.9s;
   -moz-transition: 0.9s;
@@ -63,8 +70,8 @@ html[dark] .btn-list > * {
   -o-transition: 0.9s;
 }
 
-#skills :is(.swiper-button-next, .swiper-button-prev):hover {
-  color: #fff;
+:is(.swiper-button-next, .swiper-button-prev):hover {
+  color: #fff !important;
 }
 
 /* Footer */
