@@ -238,6 +238,27 @@ nav.shown {
   z-index: 9999;
 }
 
+section.marg {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+section.round {
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+section.pad {
+  padding: 5rem 2.5rem;
+}
+
+section.pad-sm {
+  padding: 3rem 2.5rem;
+}
+
 /* Gradient button */
 .btn-grad {
   font-size: 1.3rem;
@@ -301,6 +322,10 @@ nav.shown {
 }
 body.loading {
   overflow: hidden;
+}
+
+.gradient-bg-header {
+  background: var(--gradient--header);
 }
 
 /* Extra small devices (portrait phones, less than 576px) */

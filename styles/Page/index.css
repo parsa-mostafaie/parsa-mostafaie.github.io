@@ -4,24 +4,15 @@ html[dark] .btn-list > * {
 }
 
 .header-bottom {
-  background: var(--gradient--header);
   color: white;
   background-size: cover;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
   width: 100%;
   max-height: 100dvh;
   max-height: 100vh;
-  padding: 5rem 2.5rem;
 }
 
 /*? skills */
 #skills {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   height: max-content;
 }
 
