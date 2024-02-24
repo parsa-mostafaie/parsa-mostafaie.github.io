@@ -25,7 +25,7 @@ html[dark] .btn-list > * {
   height: max-content;
 }
 
-#skills b {
+#skills b.text-gradient {
   display: block;
   margin-bottom: 0.5rem;
 }

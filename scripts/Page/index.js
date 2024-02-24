@@ -9,22 +9,23 @@ window.addEventListener("load", () =>
 
 // swiper
 const swiper = new Swiper(".swiper", {
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
   centeredSlides: true,
   slidesPerView: 1,
   spaceBetween: 25,
+  initialSlide: 1,
   breakpoints: {
-    // when window width is >= 800px
-    800: {
-      slidesPerView: 2,
-      centeredSlides: true
+    // when window width is >= 992px
+    992: {
+      slidesPerView: 3,
+      centeredSlides: true,
     },
   },
   loop: true,
