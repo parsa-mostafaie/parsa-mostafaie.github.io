@@ -165,3 +165,42 @@ for (let toggler of Togglers) {
     target.type = target.type == "password" ? "text" : "password";
   });
 }
+
+//*
+let lzl = document.querySelectorAll("[load-scale], section, footer");
+
+const percentageSeen = (element) => {
+  // Get the relevant measurements and positions
+  const viewportHeight = window.innerHeight;
+  const scrollTop = window.scrollY;
+  const elementOffsetTop = element.offsetTop;
+  const elementHeight = element.offsetHeight;
+
+  // Calculate percentage of the element that's been seen
+  const distance = scrollTop + viewportHeight - elementOffsetTop;
+  const percentage = Math.round(
+    distance / ((viewportHeight + elementHeight) / 100)
+  );
+
+  // Restrict the range to between 0 and 100
+  return Math.max(0, percentage);
+};
+
+(function () {
+  lzl.forEach((el) => {
+    let f = () => {
+      let percent = percentageSeen(el);
+
+      if (percent > 5) {
+        el.classList.remove("load-0");
+      }
+      if (percent > 95 || percent == 0) {
+        el.classList.add("load-0");
+      }
+    };
+    window.addEventListener("scroll", f);
+    el.classList.add("load-0");
+    el.classList.add("trans");
+    f();
+  });
+})();

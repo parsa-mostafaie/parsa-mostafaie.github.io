@@ -328,6 +328,21 @@ body.loading {
   background: var(--gradient--header);
 }
 
+.load-0 {
+  transform: rotateX(90deg);
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+}
+.trans {
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query for `xs`; since this is the default */
 
