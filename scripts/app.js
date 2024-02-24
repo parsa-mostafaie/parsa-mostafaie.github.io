@@ -48,11 +48,7 @@ window.addEventListener("resize", check_menu_state);
 
 // darkmode
 (function () {
-  let _isDark = localStorage.getItem("isDark") || "false";
-
-  if (_isDark == "true") {
-    document.documentElement.setAttribute("dark", "dark");
-  }
+  setTheme(getTheme());
 })();
 
 document.addEventListener("keydown", (event) => {
@@ -76,31 +72,37 @@ let chngthBTN = document.createElement("button");
 })();
 
 function changeTheme() {
-  let isDark = document.documentElement.matches("[dark]");
+  setTheme(!getTheme());
+}
 
-  isDark
+function autoTheme() {
+  localStorage.removeItem("isDark");
+  setTheme(getTheme());
+}
+
+function setTheme(isDark = false) {
+  let isLight = !isDark;
+
+  isLight
     ? document.documentElement.removeAttribute("dark")
     : document.documentElement.setAttribute("dark", "dark");
 
-  isDark
-    ? localStorage.setItem("isDark", "false")
-    : localStorage.setItem("isDark", "true");
+  localStorage.setItem("isDark", isDark.toString());
 }
 
-function autoTheme(e) {
-  e.preventDefault();
+function getTheme() {
+  return (
+    (localStorage.getItem("isDark") || sys_def_theme())
+      .toString()
+      .toLowerCase() == "true"
+  );
+}
+
+function sys_def_theme() {
   let darkMedia =
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches;
-  let __dark__media = !darkMedia;
-
-  __dark__media
-    ? document.documentElement.removeAttribute("dark")
-    : document.documentElement.setAttribute("dark", "dark");
-
-  __dark__media
-    ? localStorage.setItem("isDark", "false")
-    : localStorage.setItem("isDark", "true");
+  return darkMedia;
 }
 
 // Scroll
