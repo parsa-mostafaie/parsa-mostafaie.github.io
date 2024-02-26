@@ -29,79 +29,91 @@ html {
   background-attachment: fixed;
 }
 
-.portfolio > div {
-  position: relative;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 1s;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -ms-transition: all 1s;
-  -o-transition: all 1s;
-  min-width: 75%;
-  max-width: 75%;
-}
+.portfolio {
+  user-select: none;
+  div {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    min-width: 75%;
+    max-width: 75%;
 
-.portfolio > div a {
-  padding-left: 5px;
-  color: inherit;
-}
+    a {
+      padding-left: 5px;
+      color: inherit;
+    }
 
-.portfolio > div:hover {
-  transform: scale(90%);
-  -webkit-transform: scale(90%);
-  -moz-transform: scale(90%);
-  -ms-transform: scale(90%);
-  -o-transform: scale(90%);
-  border-radius: 15%;
-  -webkit-border-radius: 15%;
-  -moz-border-radius: 15%;
-  -ms-border-radius: 15%;
-  -o-border-radius: 15%;
-}
+    img {
+      display: inline-block;
+      width: 100%;
+    }
 
-.portfolio > div > img {
-  display: inline-block;
-  width: 100%;
-}
+    span {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+    }
 
-.portfolio > div span {
-  position: absolute;
-  top: 50%;
-  z-index: 2;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+    &:hover {
+      transform: scale(90%);
+      -webkit-transform: scale(90%);
+      -moz-transform: scale(90%);
+      -ms-transform: scale(90%);
+      -o-transform: scale(90%);
+      border-radius: 15%;
+      -webkit-border-radius: 15%;
+      -moz-border-radius: 15%;
+      -ms-border-radius: 15%;
+      -o-border-radius: 15%;
+
+      &::before {
+        width: 100%;
+      }
+    }
+
+    &::before {
+      transition: width 1s;
+      content: "";
+      left: 0;
+      position: absolute;
+      z-index: 1;
+      background: var(--gradient--2);
+      opacity: 0.75;
+      width: 0%;
+      height: 100%;
+      border-radius: inherit;
+      -webkit-border-radius: inherit;
+      -moz-border-radius: inherit;
+      -ms-border-radius: inherit;
+      -o-border-radius: inherit;
+      -webkit-transition: width 1s;
+      -moz-transition: width 1s;
+      -ms-transition: width 1s;
+      -o-transition: width 1s;
+    }
+  }
 }
 
 html[dark] .portfolio > div span {
   color: white;
 }
 
-.portfolio > div::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  background: var(--gradient--2);
-  opacity: 0.75;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  -webkit-border-radius: inherit;
-  -moz-border-radius: inherit;
-  -ms-border-radius: inherit;
-  -o-border-radius: inherit;
-}
-
 html[dark] .portfolio > div::before {
   background-image: var(--gradient--4);
 }
-
 
 @media only screen and (min-width: 576px) {
   .portfolio > div {
