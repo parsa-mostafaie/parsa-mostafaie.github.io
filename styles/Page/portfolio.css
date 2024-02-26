@@ -115,6 +115,10 @@ html[dark] .portfolio > div::before {
   background-image: var(--gradient--4);
 }
 
+html:not([dark]) .portfolio > div::before{
+  width: 100%;
+}
+
 @media only screen and (min-width: 576px) {
   .portfolio > div {
     max-width: 50%;
