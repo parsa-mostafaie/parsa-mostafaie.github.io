@@ -46,29 +46,39 @@ function check_menu_state() {
 
 window.addEventListener("resize", check_menu_state);
 
-// darkmode
-(function () {
-  setTheme(getTheme());
-})();
-
 document.addEventListener("keydown", (event) => {
   if (event.ctrlKey && event.key === "m") {
     location.href = "/";
   }
 });
 
-// Create Change Theme Button
+// fontAwesome
+window.addEventListener("load", () => {
+  let fontAwesome = document.createElement("link");
+  fontAwesome.rel = "stylesheet";
+  fontAwesome.href = "/assets/fontawesome/css/all.css";
+  let headTag = document.querySelector("head");
+  headTag.appendChild(fontAwesome);
+});
+
+// Create Change Theme Button && DARKMODE
 let chngthBTN = document.createElement("button");
 
 (function () {
-  chngthBTN.innerHTML = `Theme`;
+  chngthBTN.innerHTML = `<i class='fa fa-moon'></i>`;
 
-  chngthBTN.classList.add("btn-grad", "bottom-this", "no-margin");
+  chngthBTN.classList.add("bottom-this");
+  chngthBTN.style.cssText =
+    "border: none; outline: none; background: darkblue; color: blue; margin: 5px; font-size: 1.5rem; padding: 5px; border-radius: 50%; min-width: 2em; aspect-ratio: 1;";
   chngthBTN.addEventListener("click", changeTheme);
   chngthBTN.addEventListener("contextmenu", autoTheme);
   chngthBTN.addEventListener("long-press", autoTheme);
 
   document.body.append(chngthBTN);
+})();
+
+(function () {
+  setTheme(getTheme());
 })();
 
 function changeTheme() {
@@ -88,6 +98,11 @@ function setTheme(isDark = false) {
     : document.documentElement.setAttribute("dark", "dark");
 
   localStorage.setItem("isDark", isDark.toString());
+
+  let chI = chngthBTN.querySelector("i");
+
+  chI.classList.add(isLight ? "fa-moon" : "fa-sun");
+  chI.classList.remove(isDark ? "fa-moon" : "fa-sun");
 }
 
 function getTheme() {
@@ -204,3 +219,29 @@ const percentageSeen = (element) => {
     f();
   });
 })();
+
+// FAVICON FOR ALL Pages
+window.addEventListener("load", () => {
+  let favicon = `<link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />`;
+
+  let titleTag = document.querySelector("title");
+
+  titleTag.insertAdjacentHTML("afterend", favicon);
+});

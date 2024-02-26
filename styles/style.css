@@ -229,12 +229,7 @@ nav.shown {
 .bottom-this {
   position: fixed;
   bottom: 0;
-  right: 50%;
-  transform: translateX(+50%);
-  -webkit-transform: translateX(+50%);
-  -moz-transform: translateX(+50%);
-  -ms-transform: translateX(+50%);
-  -o-transform: translateX(+50%);
+  left: 0;
   z-index: 9999;
 }
 
