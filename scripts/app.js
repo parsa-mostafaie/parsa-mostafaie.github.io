@@ -1,11 +1,18 @@
-function appearChars(str, elem, timeBetween) {
-  var index = -1;
-  setTimeout(function go() {
-    if (++index < str.length) {
-      elem.innerHTML = elem.innerHTML + str.charAt(index);
-      setTimeout(go, timeBetween);
-    }
-  }, delay);
+let appearChar = (char, elem, t) =>
+  new Promise((res, rej) => {
+    setTimeout(() => {
+      elem.innerHTML += char;
+      res();
+    }, t);
+  });
+async function appearChars(str, elem, timeBetween, delay) {
+  if (str.length <= 0) return false;
+  elem.innerHTML = str[0];
+  await appearChar("", elem, delay);
+  for (let i = 1; i < str.length; i++) {
+    await appearChar(str[i], elem, timeBetween);
+  }
+  return true;
 }
 
 // Menu

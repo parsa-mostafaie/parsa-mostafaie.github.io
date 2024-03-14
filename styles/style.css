@@ -15,6 +15,12 @@
   width: 50%;
 }
 
+.trunc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .center-f {
   position: absolute;
   top: 50%;

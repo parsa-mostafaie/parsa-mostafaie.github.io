@@ -1,11 +1,27 @@
-var str = "arsa Mostafaie";
 var elem = document.getElementById("name");
 var timeBetween = 50;
 var delay = 10;
+var str;
 
-window.addEventListener("load", () =>
-  appearChars(str, elem, timeBetween, delay)
-);
+{
+  let $flag = false;
+
+  function f() {
+    let $str = window.matchMedia("(min-width: 400px)").matches
+      ? "Parsa Mostafaie"
+      : "Parsa";
+
+    if ($str == str) return;
+    str = $str;
+    if ($flag) return;
+    $flag = true;
+    appearChars($str, elem, 50, 10).then(() => ($flag = false));
+  }
+}
+
+window.addEventListener("load", f);
+
+window.addEventListener("resize", f);
 
 // swiper
 const swiper = new Swiper(".swiper", {
