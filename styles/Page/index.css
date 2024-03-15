@@ -1,5 +1,6 @@
 /*? Header */
 html[dark] .btn-list > * {
+  max-width: max-content;
   color: #eee;
 }
 
@@ -92,7 +93,7 @@ footer a {
   .flex-espec-row {
     flex-direction: row;
   }
-  .es-ai-center{
+  .es-ai-center {
     align-items: center;
   }
 }
