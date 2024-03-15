@@ -92,6 +92,9 @@ footer a {
   .flex-espec-row {
     flex-direction: row;
   }
+  .es-ai-center{
+    align-items: center;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */

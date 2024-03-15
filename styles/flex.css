@@ -1,5 +1,5 @@
 .flex {
-  display: flex;
+  display: flex !important;
 }
 
 .flex-row {
@@ -120,6 +120,6 @@
   background-color: blue;
 }
 
-.color > *{
+.color > * {
   background-color: yellow;
 }
